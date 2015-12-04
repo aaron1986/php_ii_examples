@@ -1,0 +1,27 @@
+<?php
+
+function makeArrayUpper($myarray){
+
+  if (! is_array($myarray)){
+    return TRUE;
+   
+  } else {
+   
+        return FALSE;
+  }
+   
+  foreach ($myarray AS $key=>$value){
+    $myarray[$key] = strtoupper($value);
+  }
+ 
+  return $myarray;
+   
+}
+
+$myarray = explode (' ', 'Zend Training - Building Security into you PHP Applications');
+
+$myarray = makeArrayUpper($myarray);
+
+var_dump($myarray);
+
+?>
